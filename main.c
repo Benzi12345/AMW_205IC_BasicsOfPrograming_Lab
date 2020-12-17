@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, Bartłomiej Dobosz\n");
+    printf("Hello, Dobosz Bartłomiej\n");
     return 0;
 }
