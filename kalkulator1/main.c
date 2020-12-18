@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main ()
 {
-    int a, b, wynik;
+    float a, b, wynik;
     char c;     ///operacja
     printf("Prosze podaj pierwsza liczbe: \n");
-    scanf("%d", &a);
+    scanf("%f", &a);
     printf("Prosze podaj druga liczne: \n");
-    scanf("%d", &b);
+    scanf("%f", &b);
     getchar();
     printf("Prosze podaj operacje: \n");
     scanf("%c", &c);
@@ -14,16 +14,16 @@ int main ()
     switch (c)   /// operacja
     {
         case   '+': wynik=a+b;
-            printf("Wynik to: %d\n", wynik);
+            printf("Wynik to: %f\n", wynik);
             break;
         case   '-': wynik=a-b;
-            printf("Wynik to: %d\n", wynik);
+            printf("Wynik to: %f\n", wynik);
             break;
         case   '*': wynik=a*b;
-            printf("Wynik to: %d\n", wynik);
+            printf("Wynik to: %f\n", wynik);
             break;
         case   '/': wynik=a/b;
-            printf("Wynik to: %d\n", wynik);
+            printf("Wynik to: %f\n", wynik);
 
             if (b==0)
             {
@@ -33,7 +33,7 @@ int main ()
             {
 
                 '/'; wynik=a/b;
-                printf("Wynik to: %d\n", wynik);
+                printf("Wynik to: %f\n", wynik);
 
             }
 
