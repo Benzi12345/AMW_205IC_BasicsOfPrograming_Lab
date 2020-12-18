@@ -2,15 +2,14 @@
 
 int main() {
 
-    int x,y,wynik;
+    float x,y, wynik;
     char znak;
 
-    scanf("%d",&x);
+    scanf("%f",&x);
 
-    getchar();
-    scanf("%c",&znak);
+    scanf(" %c",&znak);
 
-    scanf("%d",&y);
+    scanf("%f",&y);
 
 
 
@@ -18,30 +17,28 @@ int main() {
     {
         case '+':
             wynik=x+y;
-            printf("%d",wynik);
             break;
 
         case '-':
             wynik=x-y;
-            printf("%d",wynik);
             break;
 
         case '*':
             wynik=x*y;
-            printf("%d",wynik);
             break;
 
         case '/':
             if(y==0)
                 {
                   printf("Nie mozna dzielic przez 0");
+                  return 0;
                 }
             else
                 {
                 wynik=x/y;
-                printf("\n%d",wynik);
                 }
             break;
     }
+    printf("%f",wynik);
     return 0;
 }
