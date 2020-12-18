@@ -1,40 +1,36 @@
-#include <stdio.h>
-
+#include <stdio.h>>
 int main()
 {
-    int liczba1,liczba2;
-    float result;
+    int liczba1, liczba2;
+    float wynik;
     char ch;
 
-    printf("Podaj pierwsza liczbe: ");
-    scanf("%d",&liczba1);
-    printf("Podaj druga liczbe: ");
-    scanf("%d",&liczba2);
+    printf("Wpisz rownanie matematyczne: ");
+    scanf("%d", &liczba1);
+    scanf("%c", &ch);
+    scanf("%d", &liczba2);
 
-    printf("Wybierz dzialanie na liczbach(+,-,*,/,): ");
-    scanf(" %c",&ch);
-
-    result=0;
-    switch(ch)
+    wynik = 0;
+    switch (ch)
     {
         case '+':
-            result=liczba1+liczba2;
+            wynik = liczba1 + liczba2;
             break;
 
         case '-':
-            result=liczba1-liczba2;
+            wynik = liczba1 - liczba2;
             break;
 
         case '*':
-            result=liczba1*liczba2;
+            wynik = liczba1 * liczba2;
             break;
 
         case '/':
-            result=(float)liczba1/(float)liczba2;
+            wynik = (float) liczba1 / (float) liczba2;
             break;
-
     }
 
-    printf("Wynik rownania: %d %c %d = %f\n",liczba1,ch,liczba2,result);
+
+    printf("Wynik rownania: %d %c %d = %f\n", liczba1, ch, liczba2, wynik);
     return 0;
 }
