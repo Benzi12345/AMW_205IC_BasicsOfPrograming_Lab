@@ -2,11 +2,12 @@
 
 int main() {
 
-    printf("Prosty kalkulator,wpisz pierw 2 liczby a potem znak dzialania (+,-,* lub / \n" );
-    float a,b,wynik;
+    printf("Prosty kalkulator,wpisz pierw  liczbe , znak dzialania (+,-,* lub /) potem druga liczbe  \n" );
+    int a,b;
+    float wynik;
     char znak;
-    scanf("%f",&a);
-    scanf("%f",&b);
+    scanf("%i",&a);
+    scanf("%i",&b);
 
     scanf(" %c",&znak);
     if(znak == '+') {
@@ -29,21 +30,23 @@ int main() {
 
 
     }
-    else if(znak == '/')
+    else if(znak == '/' && a != 0 && b != 0)
     {
         wynik=a/b;
         printf("Wynik dzielenia wynosi %f",wynik );
 
 
     }
-    else
+    else if(znak == '/' && a == 0 || b == 0)
     {
-        printf("Bledny typ operatora" );
+        printf("Nie dzielimy przez 0" );
 
 
     }
-
-
+    else
+    {
+        printf("bledny typ operatora");
+    }
 
     return 0;
 }
