@@ -6,32 +6,32 @@ int main() {
     char znak;
 
     printf("Kalkulator");
-    printf("\nPodaj operator: (+,-,/,*): ");
+    printf("Podaj operator: (+,-,/,*): ");
     scanf("%c",&znak);
-    printf("\n Podaj pierwsza liczbe : ");
+    printf(" Podaj pierwsza liczbe : ");
     scanf("%i",&l1);
-    printf("\n Podaj druga liczbe : ");
+    printf(" Podaj druga liczbe : ");
     scanf("%i",&l2);
 
     printf("Wprowadzono liczby: %i,%i",l1,l2);
 
     if(znak== '+' ){
         suma=l1+l2;
-        printf("\n Wynik dodawania  %i + %i wynosi: %i",l1,l2,suma);
+        printf("Wynik dodawania  %i + %i wynosi: %i",l1,l2,suma);
     }
     else if(znak== '-' ){
         roznica=l1-l2;
-        printf("\n Wynik odejmowania %i - %i wynosi: %i",l1,l2,roznica);
+        printf("Wynik odejmowania %i - %i wynosi: %i",l1,l2,roznica);
     }
     else if(znak== '*' ){
         iloczyn=l1*l2;
-        printf("\n Wynik mnozenia  %i * %i wynosi: %i",l1,l2,iloczyn);
+        printf("Wynik mnozenia  %i * %i wynosi: %i",l1,l2,iloczyn);
     }
     else if(znak== '/' ){
         iloraz=l1/l2;
-        printf("\n Wynik dzielenia  %i / %i wynosi: %i",l1,l2,iloraz);
+        printf("Wynik dzielenia  %i / %i wynosi: %i",l1,l2,iloraz);
     }
     else{
-        printf("\n Wystapil blad.");
+        printf("Wystapil blad.");
     }
 }
