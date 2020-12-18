@@ -5,9 +5,12 @@ int main() {
     float wynik;
     char operacja;
 
+    printf("Prosze podaj pierwsza liczbe:");
     scanf("%i",&liczba1);
-    scanf(" %c",&operacja);
+    printf("Prosze podaj druga liczbe:");
     scanf("%i",&liczba2);
+    printf("Prosze podaj operacje:");
+    scanf(" %c",&operacja);
     switch (operacja)
     {
         case '+':
