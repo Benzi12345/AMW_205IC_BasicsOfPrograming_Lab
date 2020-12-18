@@ -32,8 +32,8 @@ int main()
             if(num2 == 0)
                 printf("Blad! Nie dziele przez 0");
             else if(num2 > 0)
-            result=(float)num1/(float)num2;
-                break;
+                result=(float)num1/(float)num2;
+            break;
 
 
         default:
