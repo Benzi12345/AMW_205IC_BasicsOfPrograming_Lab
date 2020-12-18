@@ -2,25 +2,28 @@
 
 int main() {
     char zn;
-    float l1;
-    float l2;
+    int l1, l2, wynik=0;
 
-    printf("Podaj znak (+, -, *, /):\n");
-    scanf("%c", &zn);
+    printf("Podaj znak (+, -, *, /) oraz dwie liczby:\n");
+    scanf("%c%i%i", &zn, &l1, &l2);
 
-    printf("Podaj dwie liczby:\n");
-    scanf("%f %f", &l1, &l2);
-
-    if(op=='+'){
-        printf("Wynik dodawania %f + %f = %f to", l1, l2, l1+l2);
-    }else if(op=='-'){
-        printf("Wynik odejmowania %f - %f = %f to", l1, l2, l1-l2);
-    }else if(op=='*'){
-        printf("Wynik mnożenia %f * %f = %f to", l1, l2, l1 * l2);
-    }else if(op=='/'){
-        printf("Wynik dzielenia %f / %f = %f to", l1, l2, l1/l2);
+    if(zn=='+'){
+        wynik=l1+l2;
+    }else if(zn=='-'){
+        wynik=l1-l2;
+    }else if(zn=='*'){
+        wynik=l1*l2;
+    }else if(zn=='/'){
+        if(l2==0){
+            printf("nie po prostu nie...");
+            return 0;
+        }else {
+            wynik=l1/l2;
+        }
     }else {
-        printf("podałeś złe dane");
+        printf("coś poszło nie tak\n try again");
     }
+    printf("Wynik %i %c %i = %i", l1, zn, l2, wynik);
+
     return 0;
 }
