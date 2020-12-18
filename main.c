@@ -27,7 +27,7 @@ int main()
 
             }
             else
-                {
+            {
                 '/';
                 wynik = number1 / number2;
             }
