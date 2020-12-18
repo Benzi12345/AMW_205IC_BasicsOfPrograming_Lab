@@ -1,29 +1,40 @@
 #include <stdio.h>
 
     int main() {
-        printf("Wybierz dzialanie:\n1.dodawanie\n2.odejmowanie\n3.mnozenie\n4.dzielenie \n");
-        int wybor;
-        printf("Podaj pierwsza liczbe\n");
-        int liczba1;
-        printf("Podaj druga liczbe\n");
-        int liczba2;
+
+        int a,c;
+        int dzielenieprzezzero=0;
+        char b;
+        float wynik;
+                printf("Wprowadz dzialanie\n");
+        scanf("%d%c%d",&a,&b,&c);
+        switch(b)
+        {
+            case '+':
+                wynik=a+c;
+                printf("Wynik dzialania to %d\n", (int)wynik);
+                break;
+            case '-':
+                wynik=a-c;
+                printf("Wynik dzialania to %d\n", (int)wynik);
+                break;
+            case '*':
+                wynik=a*c;
+                printf("Wynik dzialania to %d\n", (int)wynik);
+                break;
+            case '/':
+                if (c==0)
+                    {
+                    printf("Nie dzieli sie przez 0");
+                    dzielenieprzezzero=1;
+                    break;
+                    }
+                else
+                    wynik=a/(float)c;
+                    printf("Wynik dzialania to %.2f\n", wynik);
+                break;
 
 
-        scanf("%d %i %i", &wybor,&liczba1,&liczba2);
-
-
-
-        if(wybor == 1) {
-            printf("Wynik to: %i+%i=%d\n", liczba1,liczba2,(liczba1+liczba2));
-        }
-        else if(wybor ==2 ) {
-            printf("Wynik to: %i-%i=%d\n", liczba1,liczba2,(liczba1-liczba2));
-        }
-        else if(wybor ==3 ) {
-            printf("Wynik to: %i*%i=%d\n",  liczba1,liczba2,(liczba1*liczba2));
-        }
-        else if(wybor ==4 ) {
-            printf("Wynik to: %i/%i=%d\n",liczba1,liczba2,(liczba1/liczba2));
         }
 
         return 0;
