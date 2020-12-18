@@ -7,14 +7,12 @@ int main(){
     float wynik;
     char znak;
 
-    printf("Wpisz pierwsza liczbe: ");
-    scanf("%f", &x);
 
-    printf("Wpisz druga liczbe: ");
+    scanf("%f", &x);
+    scanf(" %c", &znak);
     scanf("%f", &y);
 
-    printf("Podaj znak operacji: ");
-    scanf(" %c", &znak);
+
 
     if(znak == '+')
     {
