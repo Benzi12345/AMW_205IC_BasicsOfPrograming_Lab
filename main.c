@@ -1,33 +1,41 @@
 #include <stdio.h>
 
 int main() {
-    float liczba1,liczba2,suma;
+    int liczba1,liczba2;
+    float wynik;
     char operacja;
 
-    scanf("%f",&liczba1);
+    scanf("%i",&liczba1);
     scanf(" %c",&operacja);
-    scanf("%f",&liczba2);
+    scanf("%i",&liczba2);
     switch (operacja)
     {
         case '+':
-            suma=liczba1+liczba2;
+            wynik=liczba1+liczba2;
             break;
 
         case '-':
-            suma=liczba1-liczba2;
+            wynik=liczba1-liczba2;
             break;
 
         case '*':
-            suma=liczba1*liczba2;
+            wynik=liczba1*liczba2;
             break;
 
         case '/':
-            suma=liczba1/liczba2;
+            if(liczba1 ==0 || liczba2 ==0 || liczba1 && liczba2 ==0)
+            {
+                printf("Nie mozna dzielic przez 0");
+            }
+            else
+            {
+                wynik = liczba1 / liczba2;
+            }
             break;
 
         default:
             printf("Wybrana zla operacja");
     }
-    printf("Wynik: %f",suma);
+    printf("Wynik: %f",wynik);
     return 0;
 }
