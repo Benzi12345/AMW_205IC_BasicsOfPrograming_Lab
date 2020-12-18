@@ -5,13 +5,14 @@ int main() {
     float x,y, wynik;
     char znak;
 
+    printf("Podaj pierwsza liczbe: \n");
     scanf("%f",&x);
 
-    scanf(" %c",&znak);
-
+    printf("Podaj druga liczbe: \n");
     scanf("%f",&y);
 
-
+    printf("Podaj dzialanie (+,-,*,/): \n");
+    scanf(" %c",&znak);
 
     switch(znak)
     {
@@ -39,6 +40,6 @@ int main() {
                 }
             break;
     }
-    printf("%f",wynik);
+    printf("Wynik dzialania to: \n%f",wynik);
     return 0;
 }
