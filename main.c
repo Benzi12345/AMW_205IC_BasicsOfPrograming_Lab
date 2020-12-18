@@ -1,6 +1,28 @@
-#include <stdio.h>
+#include <stdio.h>>
+int main(){
 
-int main() {
-    printf("Witaj Krupiński Szymon\n");
-    return 0;
+    float a, b, suma,roznica,iloraz,iloczyn;
+    char licz;
+
+    printf("Wpisz dzialanie: ");
+    scanf("%f",&a);
+    scanf("%c",&licz);
+    scanf("%f",&b);
+
+    if(licz == '+'){
+        suma = a + b;
+        printf("%f", suma);
+    }
+    if(licz == '-'){
+        roznica = a - b;
+        printf("%f", roznica);
+    }
+    if(licz == '*'){
+        iloczyn = a * b;
+        printf("%f", iloczyn);
+    }
+    if(licz == '/'){
+        iloraz = a / b;
+        printf("%f", iloraz);
+    }
 }
