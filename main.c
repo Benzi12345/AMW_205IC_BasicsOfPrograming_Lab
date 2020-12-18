@@ -1,48 +1,49 @@
 #include <stdio.h>
-
 int main()
 {
-    int a, b, choice;
+    char choice;
+    float number1, number2, wynik;
+    char flag = 1;
+    printf("Prosty kalkulator\n\n");
+    printf("Pierwsza liczba   [+ - * /]  Druga liczba\n");
 
-    printf("Wybierz dzialanie:\n");
-    printf("1. Dodawanie\n2. Odejmowanie\n3. Mnozenie\n4. Dzielenie\n\n");
-    scanf("%d", &choice);
+    scanf("%f %c %f", &number1, &choice, &number2);
 
-    if(choice > 4)
+    switch(choice)
     {
-        printf("Bledny wybor\n");
+        case '+':
+            wynik = number1 + number2;
+            break;
+        case '-':
+            wynik = number1 - number2;
+            break;
+        case '*':
+            wynik = number1 * number2;
+            break;
+        case '/':
+            if (number2 ==0)
+            {
+                printf("Nie mozna dzielic przez 0");
+
+            }
+            else
+                {
+                '/';
+                wynik = number1 / number2;
+            }
+            break;
+        default:
+            flag = 0;
+            break;
+    }
+
+    if(flag)
+    {
+        printf("%.2f %c %.2f = %.2f\n\n", number1, choice, number2, wynik);
     }
     else
     {
-        printf("Wybierz dwie liczby:\n");
-        scanf("%d %d", &a, &b);
+        printf("Please Enter Valid Operator\n\n");
     }
-
-
-    if(choice == 1)
-    {
-        printf("Wnyik dzialania %d + %d jest rowny %d\n", a, b, (a+b));
-    }
-    else if(choice == 2)
-    {
-        printf("Wynik dzialania %d - %d jest rowny %d\n", a, b, (a-b));
-    }
-    else if(choice == 3)
-    {
-        printf("Wynik dzialania %d * %d jest rowny %d\n", a, b, (a*b));
-    }
-    else if(choice == 4)
-    {
-        if(b != 0)
-            printf("Wynik dzialania %d / %d jest rowny %d\n", a, b, (a/b));
-        else
-            printf("Nie mozna dzielic przez 0\n");
-    }
-    else
-    {
-        printf("\n""Wpisz dowolny numer od 1 do 4\n");
-    }
-
-
     return 0;
 }
