@@ -2,34 +2,34 @@
 
 int main() {
 
-    int liczba1,liczba2,suma,roznica,iloraz,iloczyn;
+    float liczba1,liczba2,wynik;
     char znak;
 
     printf("Kalkulator");
-    printf("\nPodaj operator: (+,-,/,*): \n");
+    printf("\n Podaj operator: (+,-,/,*): \n");
     scanf("%c",&znak);
     printf("\n Podaj pierwsza liczbe : ");
-    scanf("%i",&liczba1);
+    scanf("%f",&liczba1);
     printf("\n Podaj druga liczbe : ");
-    scanf("%i",&liczba2);
+    scanf("%f",&liczba2);
 
-    printf("Wprowadzono liczby: %i,%i",liczba1,liczba2);
+    printf("Wprowadzono liczby: %f,%f",liczba1,liczba2);
 
     if(znak== '+' ){
-        suma=liczba1+liczba2;
-        printf("\n Wynik dodawania liczb %i + %i wynosi: %i",liczba1,liczba2,suma);
+        wynik=liczba1+liczba2;
+        printf("\n Wynik dodawania liczb %lf + %lf wynosi: %lf",liczba1,liczba2,wynik);
     }
     else if(znak== '-' ){
-        roznica=liczba1-liczba2;
-        printf("\n Wynik odejmowania liczb %i - %i wynosi: %i",liczba1,liczba2,roznica);
+        wynik=liczba1-liczba2;
+        printf("\n Wynik odejmowania liczb %lf - %lf wynosi: %lf",liczba1,liczba2,wynik);
     }
     else if(znak== '*' ){
-        iloczyn=liczba1*liczba2;
-        printf("\n Wynik mnozenia liczb %i * %i wynosi: %i",liczba1,liczba2,iloczyn);
+        wynik=liczba1*liczba2;
+        printf("\n Wynik mnozenia liczb %lf * %lf wynosi: %lf",liczba1,liczba2,wynik);
     }
     else if(znak== '/' ){
-        iloraz=liczba1/liczba2;
-        printf("\n Wynik dzielenia liczb %i / %i wynosi: %i",liczba1,liczba2,iloraz);
+        wynik=liczba1/liczba2;
+        printf("\n Wynik dzielenia liczb %lf / %lf wynosi: %lf",liczba1,liczba2,wynik);
     }
     else{
         printf("\n Wystapil blad podczas wprowadzania danych.");
