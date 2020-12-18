@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    float a,b,score ; //uzyłem flota gdyż wolałem by wyniki wychodziły po przecinku
+    int a,b ;
+    float score;
     char sign;
     printf("Podaj rowanie: ");
-    scanf("%f%c%f",&a,&sign,&b);
+    scanf("%d%c%d",&a,&sign,&b);
 
     switch (sign) {
         case '+':
@@ -25,7 +26,7 @@ int main() {
                 printf("Error! Nie mozna dzielic przez 0");
             }
             else{
-                score = a/b;
+                score = (float)a/(float)b;
                 printf("Wynik dzielenia to: %f",score);
             }
             break;
