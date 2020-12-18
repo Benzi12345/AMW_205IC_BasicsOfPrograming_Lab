@@ -1,37 +1,50 @@
 #include <stdio.h>
 
 int main() {
+   //Zmienne
+   float liczba1, liczba2, wynik, dodawanie, odejmowanie, mnozenie, dzielenie;
+   char operacja;
 
-    //Moje zmienne
-    double numer1;
-    double numer2;
-    char Operacje;
 
-    //Pierwsza liczba
-    printf("Prosze o podanie pierwszej liczby: ");
-    scanf("%lf", &numer1 );
+   //Wpisywanie danych przez użytkownika
+   printf("Wprowadz dzialanie: ");
+   scanf("%f",&liczba1);
+   scanf("%c",&operacja);
+   scanf("%f",&liczba2);
 
-    //Wybór znaku
-    printf("Do wyboru jest +, -, *, /");
-    printf(" Podaj operacje ktora chcesz wykonac: ");
-    scanf(" %c", &Operacje );
+   //Obliczenia
+   if (operacja == '+'){
+       dodawanie = liczba1 + liczba2;
+       printf("%f", dodawanie);
 
-//Druga liczba
-    printf("Prosze podac druga liczbe:");
-    scanf("%lf", &numer2);
+   } else if (operacja == '-'){
+       odejmowanie = liczba1 - liczba2;
 
-//Część matematyczna
-    if(Operacje == '+') {
-        printf("%f", numer1 + numer2);
-    } else if ( Operacje == '-'){
-        printf("%f", numer1 - numer2);
-    } else if ( Operacje == '*'){
-        printf("%f", numer1 * numer2);
-    } else if ( Operacje == '/'){
-        printf("%f", numer1 / numer2);
-    } else {
-        printf("Nieodpowiedni znak, prosze wpisac poprawny (+,-,*,/)");
-    }
-    return 0;
+        printf("%f", odejmowanie);
+   } else if (operacja == '*'){
+       mnozenie = liczba1 * liczba2;
+        printf("%f", mnozenie);
+
+   } else if (operacja == '/'){
+       dzielenie = liczba1 / liczba2;
+        printf("%f", dzielenie);
+
+   } else if ("%c"=='/'&&liczba2 !=0){
+       wynik=liczba1/liczba2;
+       printf("Wynik: %i/%i=%f", liczba1,liczba2,wynik);
+
+   } else {
+       printf("Nie dziel przez 0");
+   }
+//Nie mogę dodać tego "else" tutaj, wyświetla błąd i nie wiem co jest źle zrobione
+//
+// else {
+//       printf("Błędny znak, prosze podac poprawny");
+//   }
+
+
+
+
+
+       return 0;
 }
-
