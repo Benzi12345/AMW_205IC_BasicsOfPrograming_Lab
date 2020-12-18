@@ -4,12 +4,9 @@
 int main() {
     float wynik = 0, x, y;
     char z;
-    printf("Podaj pierwsza liczbe\n");
-    scanf(" %f", &x);
-    printf("Podaj druga liczbe\n");
-    scanf(" %f", &y);
-    printf("Podaj operacje +,-,*,/\n");
-    scanf(" %c", &z);
+    printf("Dzialanie:\n");
+    scanf(" %f%c%f", &x,&z,&y);
+
     switch (z) {
         case '+':
             wynik = x + y;
