@@ -5,12 +5,10 @@ int main() {
     int liczba_a, liczba_b;
     char oper; //"Znak Operacji"
     int wynik;
-    printf("Wpisz pierwsza liczbe:");
+    printf("Wpisz dzialanie:");
     scanf(" %i", &liczba_a);
-    printf("Wpisz druga liczbe:");
-    scanf(" %i", &liczba_b);
-    printf("Wpisz znak operacji:");
     scanf(" %c", &oper);
+    scanf(" %i", &liczba_b);
     switch(oper)
     {
         case '+':
