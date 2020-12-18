@@ -24,8 +24,14 @@ int main() {
             printf("Wynik mnozenia to: %f",score);
             break;
         case '/':
+            if (b==0)
+            {
+                printf("Error! Nie można dzielic przez 0");
+            }
+            else{
                 score = a/b;
                 printf("Wynik dzielenia to: %f",score);
+            }
             break;
         default:
             printf("Error! zly znak");
