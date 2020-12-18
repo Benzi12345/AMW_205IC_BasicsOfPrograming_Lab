@@ -5,31 +5,30 @@ int main() {
     int x,y,wynik;
     char znak;
 
-    printf("Podaj pierwsza liczbe: \n");
     scanf("%d",&x);
 
-    printf("Podaj druga liczbe: \n");
-    scanf("%d",&y);
-
-    printf("Podaj dzialanie (+,-,*,/): \n");
     getchar();
     scanf("%c",&znak);
+
+    scanf("%d",&y);
+
+
 
     switch(znak)
     {
         case '+':
             wynik=x+y;
-            printf("Wynik dzialania to: \n%d",wynik);
+            printf("%d",wynik);
             break;
 
         case '-':
             wynik=x-y;
-            printf("Wynik dzialania to: \n%d",wynik);
+            printf("%d",wynik);
             break;
 
         case '*':
             wynik=x*y;
-            printf("Wynik dzialania to: \n%d",wynik);
+            printf("%d",wynik);
             break;
 
         case '/':
@@ -40,7 +39,7 @@ int main() {
             else
                 {
                 wynik=x/y;
-                printf("Wynik dzialania to: \n%d",wynik);
+                printf("\n%d",wynik);
                 }
             break;
     }
