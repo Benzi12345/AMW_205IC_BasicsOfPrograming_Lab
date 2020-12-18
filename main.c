@@ -3,12 +3,8 @@
 int main() {
     float a,b,score ; //uzyłem flota gdyż wolałem by wyniki wychodziły po przecinku
     char sign;
-    printf("Podaj pierwsza liczbe: ");
-    scanf("%f",&a);
-    printf("Podaj druga liczbe: ");
-    scanf_s("%f",&b);
-    printf("Podaj dzialanie(+,-,*,/): ");
-    scanf_s(" %c",&sign);
+    printf("Podaj rowanie: ");
+    scanf("%f%c%f",&a,&sign,&b);
 
     switch (sign) {
         case '+':
@@ -26,7 +22,7 @@ int main() {
         case '/':
             if (b==0)
             {
-                printf("Error! Nie można dzielic przez 0");
+                printf("Error! Nie mozna dzielic przez 0");
             }
             else{
                 score = a/b;
