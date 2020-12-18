@@ -14,16 +14,16 @@
 
 
         if(wybor == 1) {
-            printf("Wynik to: %d\n", liczba1+liczba2);
+            printf("Wynik to: %i+%i=%d\n", liczba1,liczba2,(liczba1+liczba2));
         }
         else if(wybor ==2 ) {
-            printf("Wynik to: %d\n", liczba1-liczba2);
+            printf("Wynik to: %i-%i=%d\n", liczba1,liczba2,(liczba1-liczba2));
         }
         else if(wybor ==3 ) {
-            printf("Wynik to: %d\n",  liczba1*liczba2);
+            printf("Wynik to: %i*%i=%d\n",  liczba1,liczba2,(liczba1*liczba2));
         }
         else if(wybor ==4 ) {
-            printf("Wynik to: %d\n",liczba1*liczba2);
+            printf("Wynik to: %i/%i=%d\n",liczba1,liczba2,(liczba1/liczba2));
         }
 
         return 0;
